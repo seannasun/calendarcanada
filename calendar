@@ -1,0 +1,27 @@
+import java.util.*;
+public class CalendarCanada{
+	public static void main (String args[]){
+		System.out.print("Number of days in month?  ");
+		Scanner a = new Scanner(System.in);
+		int b= a.nextInt();
+		System.out.print("Date of first Sunday? ");
+		Scanner c = new Scanner(System.in);
+		int d= c.nextInt();
+		System.out.println("    SU    MO    TU    WE    TH    FR    SA");
+		outputCalendar(b,d);
+		
+	}
+	
+	public	static	void	printSeparator(){
+		System.out.println("+-----+-----+-----+-----+-----+-----+-----+");
+	}
+	
+	public	static	String	rightJustify(int	value,	int	spaces){
+		String e = ""+value;
+		for (int i = e.length();i <spaces;i++){
+			e=" "+e;
+			
+		}
+		e="|"+e;
+		return e;
+	}
